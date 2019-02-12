@@ -1,0 +1,37 @@
+body {
+ background: #1a1a1a;
+}
+
+#rain-container {
+ display: flex;
+ justify-content: space-between;
+}
+
+.drop {
+ position: relative;
+ width: 1px;
+ height: 40px;
+ background: blue;
+ top: 0;
+ float: left;
+ animation: animation 1s infinite;
+}
+.drop:nth-child(2n+1){
+    animation: animation 5s infinite;
+}
+.drop:nth-child(3n+1){
+    animation: animation 8s infinite;
+}
+
+@keyframes animation {
+ 0% {
+  top: 0;
+  opacity: 1;
+ }
+ 
+ 100% {
+  top: 1000px;
+  opacity: .1;
+ }
+
+}
