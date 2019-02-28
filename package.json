@@ -1,0 +1,23 @@
+{
+  "name": "simple-css-rain-animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktorarias/simple-css-rain-animation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktorarias/simple-css-rain-animation/issues"
+  },
+  "homepage": "https://github.com/viktorarias/simple-css-rain-animation#readme",
+  "dependencies": {
+    "gsap": "^2.1.1"
+  }
+}
