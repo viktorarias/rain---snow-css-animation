@@ -1,34 +1,48 @@
 import {Tweenmax} from 'gsap/TweenMax';
 
-
-const numberOfDrops = 300;
+/**
+ * Number of drops to rendering into DOM
+ */
+const numberOfDrops = 250;
 const rainContainer = document.querySelector('#rain-container');
+
+/**
+ * Create dynamic drops and put them inside the rain container
+ */
 for(let i = 0; i < numberOfDrops; i++){
 
  const createDrop = document.createElement('DIV');
 
- createDrop.classList.add('drop');
+ createDrop.classList.add('rain');
  rainContainer.appendChild(createDrop);
 
 }
- const drop = document.querySelectorAll('.drop');
+
+/**
+ * Select all drops and asign the class css animation
+ */
+ const drop = document.querySelectorAll('.rain');
  const buttonRain = document.querySelector('#rain'); 
  const buttonSnow = document.querySelector('#rain'); 
 
- function rain(){
+ /**
+  * Add rain animation class
+  */
+ function weather(){
     drop.forEach((element) => {
-        element.classList.remove('snow');
-        element.classList.add('rain');
+        element.classList.toggle('snow');
     }
-    )
- };
- function snow(){
-    drop.forEach((element) => {
-        element.classList.remove('rain');
-        element.classList.add('snow');
+    );
+    const textButton = document.querySelector('button');
+
+    if (drop.className = 'rain snow'){
+        textButton.innerHTML = "Rain"
+    }else {
+        textButton.innerHTML = 'Snow'
     }
-    )
  };
 
- buttonRain.addEventListener('click', rain);
- buttonSnow.addEventListener('click', snow);
+/**
+ * Click event to add class 
+ */
+ buttonRain.addEventListener('click', weather);
