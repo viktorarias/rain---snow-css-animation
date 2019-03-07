@@ -33,13 +33,6 @@ for(let i = 0; i < numberOfDrops; i++){
         element.classList.toggle('snow');
     }
     );
-    const textButton = document.querySelector('button');
-
-    if (drop.className = 'rain snow'){
-        textButton.innerHTML = "Rain"
-    }else {
-        textButton.innerHTML = 'Snow'
-    }
  };
 
 /**
